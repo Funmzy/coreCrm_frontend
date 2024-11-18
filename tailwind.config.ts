@@ -11,6 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        gray: {
+          "75Line": "#23232E",
+          75: "#6c757d",
+          70: "#282836",
+          40: "#79798C",
+          10: "#F2F2F5",
+        },
       },
     },
   },

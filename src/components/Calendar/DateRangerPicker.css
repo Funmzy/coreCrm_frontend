@@ -1,0 +1,41 @@
+.react-datepicker__header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  @apply relative border-b-0 pt-2 text-center text-black;
+}
+
+.react-datepicker__today-button {
+  clear: left;
+  @apply cursor-pointer border-t-0 px-0 py-1 text-center font-bold text-gray-10;
+}
+
+.react-datepicker {
+  @apply relative inline-block border-0 border-r-0 text-sm text-gray-10;
+}
+
+.react-datepicker__current-month {
+  @apply text-gray-10;
+}
+.react-datepicker__day-name {
+  @apply text-gray-10;
+}
+
+.react-datepicker__day {
+  @apply text-gray-70;
+}
+
+.react-datepicker__day:hover {
+  @apply bg-gray-75Line;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply bg-gray-75Line hover:bg-gray-75Line;
+}
+
+.react-datepicker__day--outside-month {
+  @apply text-gray-70;
+}
+
+.react-datepicker__day--disabled {
+  @apply cursor-not-allowed text-gray-40;
+}

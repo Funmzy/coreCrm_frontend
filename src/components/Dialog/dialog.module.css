@@ -1,0 +1,81 @@
+.DialogOverlay {
+  @apply fixed inset-0 z-[60] bg-[rgba(9,9,10,0.95)] opacity-80;
+}
+
+.DialogContent {
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  transform: translate(-50%, -50%);
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  @apply fixed left-1/2 top-1/2 z-[70] min-w-[35vw] focus:outline-none bg-white;
+}
+
+.DialogContent-min {
+  @apply min-w-[35vw] rounded-md p-12;
+}
+
+.DialogContent-max {
+  @apply h-screen w-screen p-1;
+}
+
+.DialogTitle {
+  @apply mb-5 text-2xl font-bold;
+}
+
+.DialogContent-info {
+  @apply border-t-4;
+  /* // border-blue-40 */
+}
+
+.DialogContent-error {
+  /* @apply border-t border--50; */
+}
+
+.DialogContent-warning {
+  /* @apply border-t-4 border-yellow-50; */
+}
+
+.DialogContent:focus {
+  outline: none;
+}
+
+.IconButton {
+  @apply border-2 rounded-full absolute right-2 top-3 inline-flex h-6 w-6 items-center justify-center rounded-full cursor-pointer;
+}
+
+.actions {
+  @apply flex items-center justify-center;
+  /* & button {
+      @apply h-12 rounded-none px-6 py-2 font-bold text-gray-10 shadow-none transition-all;
+  
+      &.confirm {
+        @apply mr-2 bg-electricViolet hover:bg-electricViolet-60;
+      }
+      &.deny {
+        @apply bg-red-50 hover:bg-red-60;
+      }
+      &.cancel {
+        @apply bg-secondary hover:bg-gray-60;
+      }
+    } */
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
